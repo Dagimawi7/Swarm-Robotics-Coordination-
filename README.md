@@ -1,4 +1,4 @@
-Swarm Robotics Coordination in Python
+*** Swarm Robotics Coordination in Python
 
 
 Project Description
