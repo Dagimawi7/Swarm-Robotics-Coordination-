@@ -11,3 +11,7 @@ The project aims to demonstrate basic swarm robotics coordination. It involves m
   Move randomly in a 2D space.
   Detect and avoid collisions with each other by changing direction.
   Continuously update and print their positions.
+
+To run it :
+
+paste the code In your preferred Ide and make sure python is installed. 
