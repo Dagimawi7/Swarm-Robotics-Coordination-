@@ -1,24 +1,22 @@
-import random  # Import the random module for generating random numbers
-import math  # Import the math module for mathematical functions
-import threading  # Import the threading module for running concurrent threads
-import time  # Import the time module for sleeping the threads
+import random  
+import math  
+import threading  
+import time  
 
-# Define a class for the swarm robot
+
 class SwarmRobot:
     def __init__(self, robot_id, x, y):
-        self.robot_id = robot_id  # Assign a unique ID to the robot
-        self.position = (x, y)  # Set the initial position of the robot
-        self.orientation = random.uniform(0, 2 * math.pi)  # Set a random initial orientation
-        self.speed = 0.1  # Set the speed of the robot (units per second)
+        self.robot_id = robot_id  
+        self.position = (x, y)  
+        self.orientation = random.uniform(0, 2 * math.pi)  
+        self.speed = 0.1 
 
     def move(self):
-        # Update position based on orientation and speed
         new_x = self.position[0] + self.speed * math.cos(self.orientation)
         new_y = self.position[1] + self.speed * math.sin(self.orientation)
         self.position = (new_x, new_y)  # Update the robot's position
 
     def avoid_collision(self, robots):
-        # Check for nearby robots to avoid collisions
         for robot in robots:
             if robot.robot_id != self.robot_id:  # Skip self
                 distance = self.calculate_distance(robot.position)
@@ -63,6 +61,6 @@ def main():
         # Handle keyboard interrupt to stop the simulation
         print("Simulation stopped.")
 
-# Entry point of the script
+
 if __name__ == '__main__':
-    main()  # Run the main function
+    main()  
